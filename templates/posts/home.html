@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+{% import 'macros/macros.html' as postMacro %}
+
+
+
+{% block content %}
+
+<h1>Hello in Home</h1>
+<div class="d-flex flex-row">
+    {% for post in posts %}
+    {{postMacro.postCard(post)}}
+    {% endfor %}
+</div>
+
+{% endblock %}
